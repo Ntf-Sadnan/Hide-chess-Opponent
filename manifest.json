@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Chess.com Opponent Hider",
+  "version": "1.1",
+  "description": "Hides the opponent's username and rating on Chess.com. Click the icon to toggle.",
+  "permissions": [
+    "storage",
+    "scripting"
+  ],
+  "host_permissions": [
+    "*://*.chess.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "hide.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.chess.com/*"],
+      "css": ["styles.css"],
+      "run_at": "document_start"
+    }
+  ]
+}

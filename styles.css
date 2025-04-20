@@ -1,0 +1,49 @@
+/* --- Chess.com Opponent Hider --- */
+
+/* --- Rules applied ONLY when body has the 'opponent-hidden' class --- */
+
+/* Hide Username */
+body.opponent-hidden div.player-info-component.player-top a.user-username-link,
+body.opponent-hidden div.player-component.player-top a.user-username-link, /* Alternative structure */
+body.opponent-hidden .board-layout-player-top [data-test-element="user-tagline-username"] /* Older fallback */
+ {
+   visibility: hidden !important; /* Hides element but keeps space */
+   pointer-events: none; /* Prevent accidental clicking on hidden link */
+}
+
+/* Hide Rating */
+body.opponent-hidden div.player-info-component.player-top span.user-tagline-rating,
+body.opponent-hidden div.player-component.player-top span.user-tagline-rating, /* Alternative structure */
+body.opponent-hidden .board-layout-player-top .user-tagline-rating /* Older fallback */
+ {
+   visibility: hidden !important;
+}
+
+/* --- Add this section to hide the opponent's country flag --- */
+
+body.opponent-hidden div.player-info-component.player-top div.country-flags-component,
+body.opponent-hidden div.player-component.player-top div.country-flags-component {
+    /* display: none !important; */ /* Use this if visibility doesn't work well */
+    visibility: hidden !important; /* Try visibility first */
+}
+
+/* --- End of added section --- */
+
+
+/* --- You can uncomment one of these blocks if the above don't work --- */
+
+/* Option B: Hide the whole user tagline block for the top player */
+/*
+body.opponent-hidden div.player-info-component.player-top .user-tagline,
+body.opponent-hidden div.player-component.player-top .user-tagline {
+    visibility: hidden !important;
+}
+*/
+
+/* Option C: Hide the entire top player info block */
+/*
+body.opponent-hidden div.player-info-component.player-top,
+body.opponent-hidden div.player-component.player-top {
+    visibility: hidden !important;
+}
+*/
