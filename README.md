@@ -1,6 +1,6 @@
 # Chess.com Opponent Hider
 
-A simple Chrome extension to hide your opponent's username, rating, and country flag on Chess.com game screens. Focus purely on the board and the game itself, free from potential psychological distractions or biases based on your opponent's stats.
+A simple Chrome extension to hide your opponent's username, profile picture, rating, and country flag on Chess.com game screens. Focus purely on the board and the game itself, free from potential psychological distractions or biases based on your opponent's stats.
 
 ## Features
 
